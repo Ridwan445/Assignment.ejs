@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chat Box</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+    <link href="/style.css" rel="stylesheet" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    />
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+        h2 {
+            font-size: 18px;
+            padding: 10px 20px;
+            color: #575ed8;
+        }
+        #chat-window {
+            height: 400px;
+            overflow-y: auto;
+            background: #f9f9f9;
+        }
+        #output p, #feedback p {
+            padding: 14px 0;
+            margin: 0 20px;
+        }
+        #output p {
+            border-bottom: 1px solid #e9e9e9;
+            color: #555;
+        }
+        #feedback p {
+            color: #aaa;
+        }
+        #output strong {
+            color: #575ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div id="chat-with-me" class="card">
+            <div class="card-body">
+                <h2 class="card-title">Chat-Me</h2>
+                <div id="chat-window" class="mb-3">
+                    <div id="output"></div>
+                    <div id="feedback"></div>
+                </div>
+                <div class="mb-3">
+                    <input id="handle" type="text" class="form-control mb-2" placeholder="Messenger" />
+                    <input id="message" type="text" class="form-control mb-2" placeholder="Message" />
+                    <button id="send" class="btn btn-primary w-100">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/chat.js"></script>
+</body>
+</html>
